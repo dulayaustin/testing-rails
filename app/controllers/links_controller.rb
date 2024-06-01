@@ -13,7 +13,7 @@ class LinksController < ApplicationController
     if @link.save
       redirect_to link_path(@link)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

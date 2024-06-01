@@ -1,4 +1,7 @@
-<%= form_with(model: @link) do |form| %>
+<%= form_with(
+  model: @link
+  ) do |form| %>
+  <%= render "shared/error_messages", object: @link %>
   <div>
     <%= form.label :title %>
     <%= form.text_field :title %>
