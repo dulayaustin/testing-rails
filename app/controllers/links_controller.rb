@@ -1,7 +1,9 @@
 class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
 
-  def index; end
+  def index
+    @links = Link.all
+  end
 
   def new
     @link = Link.new
