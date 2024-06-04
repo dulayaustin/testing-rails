@@ -1,3 +1,5 @@
-<li>
+<li id="<%= dom_id(link) %>">
+  <%= button_to "Upvote", link_upvotes_path(link), method: :post %>
+  <span data-role="score"><%= link.score %></span>
   <%= link_to link.title, link.url %>
 </li>

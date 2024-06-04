@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "links#index"
 
-  resources :links
+  resources :links do
+    resources :upvotes, only: %i[ create ]
+  end
 end
