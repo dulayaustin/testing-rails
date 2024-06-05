@@ -27,9 +27,9 @@ describe Link do
 
   describe ".highest_votes" do
     it "sort from highest to lowest scores" do
-      low_score_link = create(:link, url: 'http://testingrailsbook1.com', upvotes: 1, downvotes: 1)
-      high_score_link = create(:link, url: 'http://testingrailsbook2.com', upvotes: 23, downvotes: 4)
-      mid_score_link = create(:link, url: 'http://testingrailsbook3.com', upvotes: 4, downvotes: 2)
+      low_score_link = create(:link, upvotes: 1, downvotes: 1)
+      high_score_link = create(:link, upvotes: 23, downvotes: 4)
+      mid_score_link = create(:link, upvotes: 4, downvotes: 2)
 
       expect(Link.highest_votes).to eq [high_score_link, mid_score_link, low_score_link]
     end

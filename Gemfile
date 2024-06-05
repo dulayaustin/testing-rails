@@ -52,6 +52,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
+  gem 'faker'
 end
 
 group :development do
@@ -71,4 +72,6 @@ group :test do
 end
 
 gem "capybara"
+gem "pry"
+gem 'active_model_serializers', '~> 0.10.14'
 

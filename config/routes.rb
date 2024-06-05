@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "links#index"
 
+  namespace :api do
+    namespace :v1 do
+      resources :links
+    end
+  end
+
   resources :links do
     resources :upvotes, only: %i[ create ]
   end
