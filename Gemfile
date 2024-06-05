@@ -53,6 +53,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
   gem 'faker'
+  gem 'webdrivers', '~> 5.0', require: false
 end
 
 group :development do
