@@ -2,4 +2,9 @@
   <%= button_to "Upvote", link_upvotes_path(link), method: :post %>
   <span data-role="score"><%= link.score %></span>
   <%= link_to link.title, link.url %>
+
+  <% if link.url.include?("jpg") %>
+    <%= image_tag link.url %>
+
+  <% end %>
 </li>

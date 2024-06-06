@@ -1,1 +1,5 @@
 <%= link_to @link.title, @link.url %>
+
+<% if @link.url.include?("jpg") %>
+  <%= image_tag @link.url %>
+<% end %>
