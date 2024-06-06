@@ -1,6 +1,6 @@
 <li id="<%= dom_id(link) %>">
   <%= button_to "Upvote", link_upvotes_path(link), method: :post %>
-  <span data-role="score"><%= link.score %></span>
+  <div data-role="score"><%= formatted_score_for(link) %></div>
   <%= link_to link.title, link.url %>
 
   <% if link.url.include?("jpg") %>
