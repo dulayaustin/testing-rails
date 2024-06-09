@@ -20,8 +20,9 @@ describe Link do
   describe "#score" do
     it "returns the upvotes minus the downvotes" do
       link = Link.new(upvotes: 2, downvotes: 1)
+      score = Score.new(link)
 
-      expect(link.score).to eq(1)
+      expect(score.value).to eq(1)
     end
   end
 

@@ -1,5 +1,6 @@
 module ApplicationHelper
   def formatted_score_for(link)
-    "#{link.score} (+#{link.upvotes}, -#{link.downvotes})"
+    score = Score.new(link)
+    "#{score.value} (+#{score.upvotes}, -#{score.downvotes})"
   end
 end
