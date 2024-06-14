@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3", ">= 7.1.3.3"
+gem "rails", "7.1.3.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -50,10 +50,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
-  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
   gem 'faker'
-  gem 'webdrivers', '~> 5.0', require: false
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
 end
 
 group :development do
@@ -68,11 +67,13 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers', '~> 6.2'
+  gem "capybara"
   gem 'database_cleaner'
+  gem 'launchy', '~> 3.0', '>= 3.0.1'
+  gem 'shoulda-matchers', '~> 6.2'
+  gem 'webdrivers', '~> 5.0', require: false
 end
 
-gem "capybara"
 gem "pry"
 gem 'active_model_serializers', '~> 0.10.14'
 
